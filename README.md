@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ethos Fitness Recreation - Next.js with GSAP Animations
 
-## Getting Started
+A pixel-perfect recreation of the Ethos Fitness website built with Next.js and GSAP animations.
 
-First, run the development server:
+## 🎬 Features
+
+### Animations Implemented
+
+1. **Hero Parallax Scroll** - Background image moves slower than scroll speed
+2. **3D Tilt Effect** - Images rotate on mouse movement with perspective
+3. **Scroll-Triggered Fade-Ins** - Elements fade and slide in when scrolling into view
+4. **Color Overlay Animations** - Red color overlays animate based on scroll position
+5. **Infinite Marquee** - Continuous scrolling text with icons
+6. **Smooth Transitions** - All hover effects use smooth cubic-bezier easing
+7. **Image Parallax** - Multiple images with independent parallax speeds
+
+### Built With
+
+- **Next.js 15** (App Router)
+- **GSAP 3** (with ScrollTrigger plugin)
+- **CSS Modules** for component-scoped styling
+- **JavaScript** (ES6+)
+
+## 📁 Project Structure
+
+```
+ethos-fitness-recreation/
+├── app/
+│   ├── globals.css          # Global styles
+│   ├── page.js               # Main page component
+│   └── page.module.css       # Page styles
+├── components/
+│   ├── Hero/
+│   │   ├── Hero.js           # Hero section with parallax
+│   │   └── Hero.module.css
+│   ├── Parallax3DImage/
+│   │   ├── Parallax3DImage.js  # 3D tilt + parallax component
+│   │   └── Parallax3DImage.module.css
+│   ├── AnimatedSection/
+│   │   ├── AnimatedSection.js  # Scroll-triggered animations
+│   │   └── AnimatedSection.module.css
+│   └── Marquee/
+│       ├── Marquee.js          # Infinite scrolling text
+│       └── Marquee.module.css
+└── hooks/
+    ├── useScrollAnimation.js   # Custom scroll animation hook
+    └── useParallax.js          # Custom parallax hook
+```
+
+## 🚀 Getting Started
+
+### Install Dependencies
+
+```bash
+cd /Users/cvo/Desktop/ethos-fitness-recreation
+npm install
+```
+
+### Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🎨 Animation Details
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Hero Section
+- **Parallax Speed**: 0.5x (image moves at 50% of scroll speed)
+- **Fade-in Duration**: 1s with stagger delays
+- **Color Overlays**: Fade in/out based on scroll position
 
-## Learn More
+### 3D Tilt Effect
+- **Perspective**: 1000px
+- **Rotation Range**: ±10 degrees on X and Y axis
+- **Easing**: power2.out
+- **Duration**: 0.5s
 
-To learn more about Next.js, take a look at the following resources:
+### Scroll Animations
+- **Trigger Point**: 80% from top of viewport
+- **Animation Duration**: 0.8s
+- **Easing**: power3.out
+- **Stagger Delay**: 0.1-0.2s between elements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Marquee
+- **Speed**: 30 seconds per loop
+- **Animation**: Seamless infinite loop using GSAP
+- **Direction**: Left to right
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Key Components
 
-## Deploy on Vercel
+### `<Hero />`
+Full-screen hero section with parallax background, animated title, and smooth button transitions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### `<Parallax3DImage />`
+Reusable image component with both parallax scrolling and 3D tilt on mouse movement.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Props:**
+- `src` - Image URL
+- `alt` - Alt text
+- `height` - Container height
+- `parallaxSpeed` - Parallax multiplier (default: 0.3)
+
+### `<AnimatedSection />`
+Wrapper component that triggers animations when scrolled into view.
+
+**Props:**
+- `animationType` - 'fadeUp', 'fadeIn', 'scale', 'slideLeft', 'slideRight'
+- `delay` - Animation delay in seconds
+- `stagger` - Stagger delay for child elements
+
+### `<Marquee />`
+Infinite scrolling marquee with customizable items and speed.
+
+**Props:**
+- `items` - Array of `{ text, icon }` objects
+- `speed` - Duration in seconds for one loop
+
+## 🔧 Custom Hooks
+
+### `useScrollAnimation(config)`
+Apply scroll-triggered animations to any element.
+
+### `useParallax(speed)`
+Add parallax effect to any element.
+
+## 📱 Responsive Design
+
+- Fully responsive layout
+- Mobile-optimized animations
+- Touch-friendly interactions
+
+## 🎨 Color Scheme
+
+- Background: `#0a0a0a` (Dark Black)
+- Text: `#ffffff` (White)
+- Accent: `#ff0000` (Red)
+- Overlay: `rgba(0,0,0,0.9)` (Black with transparency)
+
+## 📝 Notes
+
+- All animations use `will-change` for GPU acceleration
+- GSAP context cleanup prevents memory leaks
+- ScrollTrigger handles scroll-based animations efficiently
+- CSS Modules ensure component-scoped styling
+- Images use CDN URLs from the original Ethos site
+
+## 🚀 Production Build
+
+```bash
+npm run build
+npm start
+```
+
+## 📦 Build Output
+
+```bash
+npm run build
+```
+
+The optimized production build will be in the `.next/` folder.
+
+---
+
+**Built by Claude Code** - Recreating pixel-perfect animations from the Ethos Fitness website
