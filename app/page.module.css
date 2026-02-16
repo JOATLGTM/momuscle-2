@@ -106,6 +106,17 @@
   margin-top: 4rem;
 }
 
+.teamImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.teamImageBlock {
+  min-height: 500px;
+}
+
 .teamDescription {
   max-width: 800px;
   margin: 4rem auto 0;
@@ -175,7 +186,7 @@
 
 /* Gyms Section */
 .withGradient {
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a0a0a 100%);
+  background: linear-gradient(180deg, #0a0a0a 0%, #0a1a2a 100%);
 }
 
 .gymsMainImage {
@@ -473,6 +484,10 @@
   }
 
   .aboutImages {
+    grid-template-columns: 1fr;
+  }
+
+  .teamImages {
     grid-template-columns: 1fr;
   }
 

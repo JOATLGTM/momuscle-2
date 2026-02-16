@@ -53,8 +53,8 @@ export default function Home() {
               delay={0.2}
             >
               <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64f4a824d1c0205e9c53eebc_pexels-ivan-samkov-4164766.webp"
-                alt="Training"
+                src="/images/bri-training.JPG"
+                alt="Bri Training"
                 height="500px"
               />
             </AnimatedSection>
@@ -65,32 +65,8 @@ export default function Home() {
               delay={0.3}
             >
               <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64f4a7d6bca35ec50eab8e6f_pexels-tima-miroshnichenko-5327534.webp"
-                alt="Workout"
-                height="500px"
-              />
-            </AnimatedSection>
-
-            <AnimatedSection
-              className={styles.imageBlock}
-              animationType="fadeUp"
-              delay={0.4}
-            >
-              <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64f4a82375a40718259829bb_pexels-cottonbro-studio-7674492.webp"
-                alt="Fitness"
-                height="500px"
-              />
-            </AnimatedSection>
-
-            <AnimatedSection
-              className={styles.imageBlock}
-              animationType="fadeUp"
-              delay={0.5}
-            >
-              <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64f4a80bf762b614246d2908_luis-reyes-mTorQ9gFfOg-unsplash.webp"
-                alt="Gym"
+                src="/images/mo-training.JPG"
+                alt="Mo Training"
                 height="500px"
               />
             </AnimatedSection>
@@ -110,8 +86,8 @@ export default function Home() {
           <AnimatedSection animationType="scale" delay={0.3}>
             <div className={styles.contentImage}>
               <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64fae2ac41d7a2600bab4887_sebastian-pociecha-FoSF9-4xTGg-unsplash.webp"
-                alt="Fitness Journey"
+                src="/images/family.jpeg"
+                alt="MoMuscle Family"
                 height="600px"
               />
             </div>
@@ -166,17 +142,33 @@ export default function Home() {
             </h2>
           </AnimatedSection>
 
-          <AnimatedSection animationType="scale" delay={0.3}>
-            <div className={styles.teamImage}>
+          <div className={styles.teamImages}>
+            <AnimatedSection
+              className={styles.teamImageBlock}
+              animationType="scale"
+              delay={0.3}
+            >
               <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64f357298a3d2877d1d1d9f1_anastase-maragos-7kEpUPB8vNk-unsplash.webp"
-                alt="The Team"
+                src="/images/mo_2.jpeg"
+                alt="Mo - Fitness Expert"
                 height="600px"
               />
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
 
-          <AnimatedSection animationType="fadeUp" delay={0.4}>
+            <AnimatedSection
+              className={styles.teamImageBlock}
+              animationType="scale"
+              delay={0.4}
+            >
+              <Parallax3DImage
+                src="/images/brie.jpeg"
+                alt="Brie - Fitness Expert"
+                height="600px"
+              />
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection animationType="fadeUp" delay={0.5}>
             <div className={styles.teamDescription}>
               <p className={styles.largeText}>
                 We believe that fitness is not just a hobby; it's a way of life.
@@ -189,119 +181,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Workout Plans Section */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <AnimatedSection animationType="fadeUp">
-            <h2 className={styles.sectionTitle}>Choose a plan</h2>
-          </AnimatedSection>
-
-          <div className={styles.plansGrid}>
-            <AnimatedSection
-              className={styles.planImageBlock}
-              animationType="fadeUp"
-              delay={0.2}
-            >
-              <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64f447e1233beaba818729e3_alora-griffiths-aVrZMPgN_Vg-unsplash.webp"
-                alt="Ready"
-                height="100%"
-              />
-            </AnimatedSection>
-
-            <div className={styles.plansList}>
-              <AnimatedSection
-                className={styles.planCard}
-                animationType="slideLeft"
-                delay={0.3}
-              >
-                <h3 className={styles.planTitle}>Endurance Elite</h3>
-                <p className={styles.planDescription}>
-                  A long-term, 16-week program focusing on improving
-                  cardiovascular health through various forms of aerobic
-                  exercise.
-                </p>
-                <div className={styles.planDetails}>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Timeline:</span> 16-week
-                    plan
-                  </div>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Price:</span> $1299
-                  </div>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Focus:</span>{' '}
-                    Cardiovascular Health
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection
-                className={styles.planCard}
-                animationType="slideLeft"
-                delay={0.4}
-              >
-                <h3 className={styles.planTitle}>Classic Sculpting</h3>
-                <p className={styles.planDescription}>
-                  A 12-week bodybuilding program that focuses on muscle isolation
-                  and hypertrophy for a chiseled physique.
-                </p>
-                <div className={styles.planDetails}>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Timeline:</span> 12-week
-                    plan
-                  </div>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Price:</span> $899
-                  </div>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Focus:</span> Muscle
-                    Hypertrophy
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection
-                className={styles.planCard}
-                animationType="slideLeft"
-                delay={0.5}
-              >
-                <h3 className={styles.planTitle}>The Strongman Series</h3>
-                <p className={styles.planDescription}>
-                  A 10-week training plan to prepare you for strongman
-                  competitions or to improve functional, real-world strength.
-                </p>
-                <div className={styles.planDetails}>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Timeline:</span> 10-week
-                    plan
-                  </div>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Price:</span> $649
-                  </div>
-                  <div className={styles.planDetail}>
-                    <span className={styles.opacity70}>Focus:</span> Functional
-                    Strength
-                  </div>
-                </div>
-              </AnimatedSection>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Gyms Section */}
       <section className={`${styles.section} ${styles.withGradient}`}>
         <div className={styles.container}>
           <AnimatedSection animationType="fadeUp">
-            <h2 className={styles.sectionTitle}>Our gyms</h2>
+            <h2 className={styles.sectionTitle}>Our gym</h2>
           </AnimatedSection>
 
           <AnimatedSection animationType="scale" delay={0.3}>
             <div className={styles.gymsMainImage}>
               <Parallax3DImage
-                src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdbf6/64f4a7ea330baf461890d05a_ambitious-studio-rick-barrett-1RNQ11ZODJM-unsplash.webp"
-                alt="Gym Locations"
+                src="/images/gym.JPG"
+                alt="MoMuscle Gym"
                 height="600px"
               />
             </div>
@@ -315,12 +206,12 @@ export default function Home() {
             >
               <div className={styles.gymImage}>
                 <img
-                  src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdc00/64f9f48fc51d6d1048d2b026_ambitious-studio-rick-barrett-aw9cszR7FGU-unsplash.jpg"
-                  alt="Apex Vitality Center"
+                  src="/images/gym-2.JPG"
+                  alt="MoMuscle Training Floor"
                   className={styles.gymImg}
                 />
               </div>
-              <h3 className={styles.gymTitle}>Apex Vitality Center</h3>
+              <h3 className={styles.gymTitle}>Training Floor</h3>
             </AnimatedSection>
 
             <AnimatedSection
@@ -330,12 +221,12 @@ export default function Home() {
             >
               <div className={styles.gymImage}>
                 <img
-                  src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdc00/64f9f49e656adf6abe492d2e_ambitious-studio-rick-barrett-v5w5NbV2dmI-unsplash.jpg"
-                  alt="Zenith Athletic Club"
+                  src="/images/gym-4.jpeg"
+                  alt="MoMuscle Equipment Area"
                   className={styles.gymImg}
                 />
               </div>
-              <h3 className={styles.gymTitle}>Zenith Athletic Club</h3>
+              <h3 className={styles.gymTitle}>Equipment Area</h3>
             </AnimatedSection>
 
             <AnimatedSection
@@ -345,63 +236,12 @@ export default function Home() {
             >
               <div className={styles.gymImage}>
                 <img
-                  src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdc00/64f9f4c7ddddde976ecff388_ambitious-studio-rick-barrett-vc09nUKk5xI-unsplash.jpg"
-                  alt="IronPulse Fitness"
+                  src="/images/gym3.JPG"
+                  alt="MoMuscle Workout Space"
                   className={styles.gymImg}
                 />
               </div>
-              <h3 className={styles.gymTitle}>IronPulse Fitness</h3>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className={`${styles.section} ${styles.withBorder}`}>
-        <div className={styles.container}>
-          <AnimatedSection animationType="fadeUp">
-            <h2 className={styles.sectionTitle}>Blog</h2>
-          </AnimatedSection>
-
-          <div className={styles.blogGrid}>
-            <AnimatedSection
-              className={styles.blogCard}
-              animationType="fadeUp"
-              delay={0.2}
-            >
-              <div className={styles.blogImageWrapper}>
-                <img
-                  src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdc00/64fae11a2331f7702dd8d998_pexels-victor-freitas-841132.jpg"
-                  alt="Blog post"
-                  className={styles.blogImage}
-                />
-              </div>
-              <div className={styles.blogContent}>
-                <p className={styles.blogTopic}>Fitness</p>
-                <h3 className={styles.blogTitle}>
-                  From Novice to Pro: Tips for Gym Etiquette
-                </h3>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection
-              className={styles.blogCard}
-              animationType="fadeUp"
-              delay={0.3}
-            >
-              <div className={styles.blogImageWrapper}>
-                <img
-                  src="https://cdn.prod.website-files.com/64f1a4c13c8ab83aab9bdc00/64fae13c78a92d721ca9d7be_louis-hansel-K47107aP8UU-unsplash.jpg"
-                  alt="Blog post"
-                  className={styles.blogImage}
-                />
-              </div>
-              <div className={styles.blogContent}>
-                <p className={styles.blogTopic}>Nutrition</p>
-                <h3 className={styles.blogTitle}>
-                  Nutrition 101: Foods That Fuel Your Workouts
-                </h3>
-              </div>
+              <h3 className={styles.gymTitle}>Workout Space</h3>
             </AnimatedSection>
           </div>
         </div>
@@ -501,12 +341,6 @@ export default function Home() {
                 Team
               </a>
             </div>
-          </div>
-
-          <div className={styles.footerBottom}>
-            <p className={styles.footerCopyright}>
-              Powered by <a href="https://webflow.com" target="_blank">Webflow</a> | Made by Metrik
-            </p>
           </div>
         </div>
       </footer>

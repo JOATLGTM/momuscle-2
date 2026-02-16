@@ -45,8 +45,7 @@
 .logoIcon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #0283C0 0%, #016a9e 100%);
-  border-radius: 4px;
+  object-fit: contain;
 }
 
 .logoText {
@@ -206,6 +205,7 @@
   .logoIcon {
     width: 35px;
     height: 35px;
+    object-fit: contain;
   }
 
   .mobileMenu {

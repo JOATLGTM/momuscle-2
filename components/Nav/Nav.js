@@ -48,7 +48,11 @@ export default function Nav() {
         <div className={styles.navInner}>
           {/* Logo */}
           <a href="/" className={styles.logo}>
-            <div className={styles.logoIcon}></div>
+            <img 
+              src="/images/badge-logo-white.png" 
+              alt="MoMuscle Logo" 
+              className={styles.logoIcon}
+            />
             <span className={styles.logoText}>MoMuscle</span>
           </a>
 
