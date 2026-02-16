@@ -3,6 +3,7 @@ import Hero from '@/components/Hero/Hero';
 import Parallax3DImage from '@/components/Parallax3DImage/Parallax3DImage';
 import AnimatedSection from '@/components/AnimatedSection/AnimatedSection';
 import Marquee from '@/components/Marquee/Marquee';
+import TestimonialCarousel from '@/components/TestimonialCarousel/TestimonialCarousel';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -244,6 +245,21 @@ export default function Home() {
               <h3 className={styles.gymTitle}>Workout Space</h3>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section className={`${styles.section} ${styles.withGradient}`}>
+        <div className={styles.container}>
+          <AnimatedSection animationType="fadeUp">
+            <h2 className={styles.sectionTitle}>
+              Success <span className={styles.opacity70}>Stories</span>
+            </h2>
+          </AnimatedSection>
+
+          <AnimatedSection animationType="fadeUp" delay={0.3}>
+            <TestimonialCarousel />
+          </AnimatedSection>
         </div>
       </section>
 
