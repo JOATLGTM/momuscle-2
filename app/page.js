@@ -1,12 +1,32 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Nav from '@/components/Nav/Nav';
 import Hero from '@/components/Hero/Hero';
 import Parallax3DImage from '@/components/Parallax3DImage/Parallax3DImage';
 import AnimatedSection from '@/components/AnimatedSection/AnimatedSection';
 import Marquee from '@/components/Marquee/Marquee';
 import TestimonialCarousel from '@/components/TestimonialCarousel/TestimonialCarousel';
+import QuestionnaireModal from '@/components/QuestionnaireModal/QuestionnaireModal';
 import styles from './page.module.css';
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    // Dynamically add the Elfsight script tag to the head
+    const script = document.createElement('script');
+    script.src = 'https://static.elfsight.com/platform/platform.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Clean up the script on unmount
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
   const marqueeItems = [
     { text: 'Strength', icon: true },
     { text: 'Conditioning', icon: true },
@@ -35,6 +55,7 @@ export default function Home() {
   return (
     <>
       <Nav />
+      <QuestionnaireModal isOpen={showModal} onClose={() => setShowModal(false)} />
       <main className={styles.main}>
         <Hero />
 
@@ -263,6 +284,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Client Reviews Section - Elfsight Widget */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <AnimatedSection animationType="fadeUp">
+            <h2 className={styles.sectionTitle}>
+              Client <span className={styles.opacity70}>Reviews</span>
+            </h2>
+          </AnimatedSection>
+
+          <AnimatedSection animationType="fadeUp" delay={0.3}>
+            <div className={styles.testimonialWrapper}>
+              <div
+                className="elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3"
+                data-elfsight-app-lazy
+              ></div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaImages}>
@@ -306,10 +347,10 @@ export default function Home() {
           delay={0.5}
         >
           <h2 className={styles.ctaTitle}>Max Your Gains</h2>
-          <a href="#explore" className={styles.ctaButton}>
-            <span>Explore</span>
+          <button onClick={() => setShowModal(true)} className={styles.ctaButton}>
+            <span>Get Started</span>
             <div className={styles.ctaButtonBg}></div>
-          </a>
+          </button>
         </AnimatedSection>
         <div className={styles.ctaBackgroundRed}></div>
         <div className={styles.ctaBackgroundBlack}></div>

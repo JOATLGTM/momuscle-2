@@ -60,3 +60,62 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #016a9e;
 }
+
+/* Elfsight Widget Dark Theme Customization */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 {
+  min-height: 400px;
+}
+
+/* Force dark backgrounds for better contrast */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 * {
+  background-color: transparent !important;
+}
+
+/* Override light gray/white backgrounds to dark */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [style*="background"],
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [style*="background-color"] {
+  background-color: rgba(26, 26, 26, 0.8) !important;
+}
+
+/* Ensure text is white on dark backgrounds */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 div,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 p,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 span,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 a,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 h1,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 h2,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 h3,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 h4 {
+  color: #ffffff !important;
+}
+
+/* Override any specific problematic colors */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [style*="color: rgb(248, 248, 248)"],
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [style*="color:#f8f8f8"],
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [style*="color: #f8f8f8"] {
+  color: #0a0a0a !important;
+}
+
+/* Style the iframe */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 iframe {
+  border-radius: 8px;
+  background-color: #1a1a1a !important;
+}
+
+/* Card/review items backgrounds */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [class*="card"],
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [class*="review"],
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [class*="item"] {
+  background-color: rgba(26, 26, 26, 0.9) !important;
+  border: none !important;
+}
+
+/* Remove hover effects */
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [class*="card"]:hover,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [class*="review"]:hover,
+.elfsight-app-88d2e0fd-0af7-448d-ad90-643f857f8de3 [class*="item"]:hover {
+  background-color: rgba(26, 26, 26, 0.9) !important;
+  border: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
