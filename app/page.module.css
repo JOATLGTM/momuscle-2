@@ -117,6 +117,14 @@
   min-height: 500px;
 }
 
+.trainerName {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  color: #ffffff;
+}
+
 .teamDescription {
   max-width: 800px;
   margin: 4rem auto 0;

@@ -175,6 +175,7 @@ export default function Home() {
                 alt="Mo - Fitness Expert"
                 height="600px"
               />
+              <h3 className={styles.trainerName}>Mo Nayal</h3>
             </AnimatedSection>
 
             <AnimatedSection
@@ -187,6 +188,7 @@ export default function Home() {
                 alt="Brie - Fitness Expert"
                 height="600px"
               />
+              <h3 className={styles.trainerName}>Brie Miller</h3>
             </AnimatedSection>
           </div>
 

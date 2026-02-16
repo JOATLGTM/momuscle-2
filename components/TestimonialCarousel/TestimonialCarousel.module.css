@@ -111,7 +111,11 @@
   }
 
   .carouselTrack {
-    gap: 1rem;
+    gap: 0;
+  }
+
+  .imageWrapper {
+    margin: 0 1rem;
   }
 
   .navButton {
